@@ -52,15 +52,6 @@ export class RouterService {
     }
   }
 }
-import Navigo from 'navigo';
-
-export const NAVIGO = new Navigo(null, true);
-
-export interface Route {
-  component?: Object;
-  template?: string;
-  url: string;
-}
 
 export class HideRouterService {
   private static readonly subscribers: Function[] = [];
