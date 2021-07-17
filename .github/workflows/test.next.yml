@@ -26,7 +26,7 @@ jobs:
         framework: [
             angular,
             angularjs,
-            # aurelia,
+            aurelia,
             inferno,
             lit-element,
             preact,
