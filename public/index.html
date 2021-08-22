@@ -3,12 +3,15 @@
   <head>
     <title>PoC - Flexible web application architecture</title>
     <meta charset="UTF-8" />
-<!--     <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-<!--     <meta http-equiv="Content-Security-Policy" content="default-src 'self'" /> -->
-<!--     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'" /> -->
+    <!--     <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <!--     <meta http-equiv="Content-Security-Policy" content="default-src 'self'" /> -->
+    <!--     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'" /> -->
     <meta http-equiv="X-WebKit-CSP" content="default-src 'self'" />
     <link rel="stylesheet" href="react/main.css" />
     <style>
+      body {
+        padding: 10px;
+      }
       header {
         float: left;
         width: 100%;
@@ -24,11 +27,6 @@
       img {
         height: 100px !important;
       }
-      main > div > div {
-        padding: 0.25em;
-        width: 350px;
-        float: left;
-      }
       a {
         color: dodgerblue;
         text-decoration: underline;
@@ -36,42 +34,44 @@
     </style>
   </head>
   <body>
-    <div style="margin: 10px">
-      <header>
-        <h1>PoC - Flexible web application architecture</h1>
-        <p>
-          This project demonstrate a flexible
-          <a href="https://esbuild.github.io/">ESBuild</a>/<a href="https://babeljs.io/">Babel</a> and
-          <a href="https://webpack.js.org/">Webpack</a> based web application architecture. The styling was realized
-          with <a href="https://windicss.org/">Windi CSS</a>.
-        </p>
-        <p>
-          More about the PoC you can find in this
-          <a
-            href="https://github.com/martinoppitz/poc-flexible-web-application-architecture"
-            target="github-martinoppitz"
-            >GitHub Repository</a
-          >.
-        </p>
-      </header>
-      <main>
-        <h3>Apps</h3>
-        <div style="display: root-flow">
-          <div id="solid"></div>
-          <div id="inferno"></div>
-          <div id="preact"></div>
-          <div id="svelte"></div>
-          <div id="lit-element"></div>
-          <div id="vue3"></div>
-          <div id="vue"></div>
-          <div id="react"></div>
-          <div id="angularjs"></div>
-          <div id="aurelia"></div>
-          <div id="angular"></div>
-          <div id="vanilla"></div>
-        </div>
-      </main>
-    </div>
+    <header>
+      <h1>PoC - Flexible web application architecture</h1>
+      <p>
+        This project demonstrate a flexible
+        <a href="https://esbuild.github.io/">ESBuild</a>/<a
+          href="https://babeljs.io/"
+          >Babel</a
+        >
+        and <a href="https://webpack.js.org/">Webpack</a> based web application
+        architecture. The styling was realized with
+        <a href="https://windicss.org/">Windi CSS</a>.
+      </p>
+      <p>
+        More about the PoC you can find in this
+        <a
+          href="https://github.com/martinoppitz/poc-flexible-web-application-architecture"
+          target="github-martinoppitz"
+          >GitHub Repository</a
+        >.
+      </p>
+    </header>
+    <main>
+      <h3>Apps</h3>
+      <div style="display: root-flow">
+        <div id="solid"></div>
+        <div id="inferno"></div>
+        <div id="preact"></div>
+        <div id="svelte"></div>
+        <div id="lit-element"></div>
+        <div id="vue3"></div>
+        <div id="vue"></div>
+        <div id="react"></div>
+        <div id="angularjs"></div>
+        <div id="aurelia"></div>
+        <div id="angular"></div>
+        <div id="vanilla"></div>
+      </div>
+    </main>
     <script src="angular/main.js"></script>
     <script src="angularjs/main.js"></script>
     <script src="aurelia/main.js"></script>
