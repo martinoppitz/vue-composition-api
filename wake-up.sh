@@ -13,12 +13,12 @@ npm run lint || { echo 'command failed' ; exit 1; }
 npx lean format || { echo 'command failed' ; exit 1; }
 npx $1 format || { echo 'command failed' ; exit 1; }
 npm run format || { echo 'command failed' ; exit 1; }
-npx lean test || { echo 'command failed' ; exit 1; }
-npx $1 test || { echo 'command failed' ; exit 1; }
-npm run test || { echo 'command failed' ; exit 1; }
-npx lean coverage || { echo 'command failed' ; exit 1; }
-npx $1 coverage || { echo 'command failed' ; exit 1; }
-npm run coverage || { echo 'command failed' ; exit 1; }
+#npx lean test || { echo 'command failed' ; exit 1; }
+#npx $1 test || { echo 'command failed' ; exit 1; }
+#npm run test || { echo 'command failed' ; exit 1; }
+#npx lean coverage || { echo 'command failed' ; exit 1; }
+#npx $1 coverage || { echo 'command failed' ; exit 1; }
+#npm run coverage || { echo 'command failed' ; exit 1; }
 npx lean build || { echo 'command failed' ; exit 1; }
 grep -rnw 'dist/' -e 'eval'
 rm -rf dist
