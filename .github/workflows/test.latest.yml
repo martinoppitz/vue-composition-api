@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [angular, angularjs, inferno, lit-element, preact, react, svelte, vanilla, vue, vue3]
+        framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
     name: Test "${{matrix.framework}}" framework
     steps:
       - uses: actions/checkout@v2.3.4
