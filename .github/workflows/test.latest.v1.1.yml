@@ -26,12 +26,12 @@ jobs:
         framework:
           - angular
           - angularjs
-          - aurelia
+#           - aurelia
           - inferno
           - lit-element
           - preact
           - react
-          - solid
+#           - solid
           - svelte
           - vanilla
           - vue
