@@ -9,7 +9,7 @@ on:
     #   tag:
     #     description: 'Tag'
     #     required: true
-    #     default: 'latest'
+    #     default: 'latest-1.1'
   schedule:
     - cron: "0 */4 * * *"
 
@@ -23,7 +23,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
+        framework:
+          - angular
+          - angularjs
+          - aurelia
+          - inferno
+          - lit-element
+          - preact
+          - react
+          - solid
+          - svelte
+          - vanilla
+          - vue
+          - vue3
     name: Test "${{matrix.framework}}" framework
     steps:
       - uses: actions/checkout@v2.3.4
@@ -39,6 +51,10 @@ jobs:
       - name: List build artifacts
         run: |
           ls -la dist/
+          mkdir ${{env.tag}}
+          mv dist/* ${{env.tag}}/
+          mv ${{env.tag}} dist/
+          ls -la dist/${{env.tag}}/
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
