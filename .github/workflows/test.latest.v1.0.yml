@@ -48,9 +48,8 @@ jobs:
           cp -r public dist
           bash ./wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: Separate build run
-        run: |
-          ls -la
-          npm run build
+        run: npm run build
+        working-directory: workspace
       - name: List build artifacts
         run: |
           ls -la dist/
