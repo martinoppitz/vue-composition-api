@@ -39,6 +39,8 @@ jobs:
       - name: List build artifacts
         run: |
           ls -la dist/
+      - name: Separate build run
+        run: npm run build
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
