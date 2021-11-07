@@ -4,9 +4,9 @@ rm -rf workspace || { echo 'command failed' ; exit 1; }
 mkdir workspace || { echo 'command failed' ; exit 1; }
 cd workspace || { echo 'command failed' ; exit 1; }
 npm install --no-save @leanup/cli@$2 @leanup/cli-$1@$2 || { echo 'command failed' ; exit 1; }
-npx $1 create -n template -o || { echo 'command failed' ; exit 1; }
 npx ncu -t patch -u -x typescript
 npm i
+npx $1 create -n template -o || { echo 'command failed' ; exit 1; }
 npx lean serve &
 npx lean lint || { echo 'command failed' ; exit 1; }
 npx $1 lint || { echo 'command failed' ; exit 1; }
