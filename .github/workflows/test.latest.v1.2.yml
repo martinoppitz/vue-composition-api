@@ -14,7 +14,7 @@ on:
     - cron: "0 */4 * * *"
 
 env:
-  tag: "latest-1.1"
+  tag: "latest-1.2"
 
 jobs:
   build:
