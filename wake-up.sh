@@ -37,7 +37,7 @@ cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
 cp -r dist/assets ../dist/$1 || { echo 'command failed' ; exit 1; }
 cp -r src/assets ../dist/ || { echo 'command failed' ; exit 1; }
 cp -r src/assets ../dist/$1 || { echo 'command failed' ; exit 1; }
-npm run build:snowpack || true
+# npm run build:snowpack || true
 # npx lean serve --port 8080 &
 # npx $1 serve --port 8081 &
 # npx lean serve -- --port 8082 &
