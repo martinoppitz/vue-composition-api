@@ -26,7 +26,7 @@ jobs:
         framework: [angular, angularjs, aurelia, inferno, lit-element, preact, react, solid, svelte, vanilla, vue, vue3]
     name: Test "${{matrix.framework}}" framework
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3.0.0
       - name: Set up Node.js
         uses: actions/setup-node@v2.5.1
         with:
